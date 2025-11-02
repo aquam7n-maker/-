@@ -1,0 +1,150 @@
+# عملیات ریاضی و خطاهای نوع داده
+x = 5
+y = 10
+print(x + y)
+
+x = 5
+y = "John"
+# print(x + y)  # این خطا می‌دهد
+
+# روش صحیح خروجی از انواع داده مختلف
+x = 5
+y = "John"
+print(x, y)
+
+
+# متغیرهای سراسری
+x = "awesome"
+
+def myfunc():
+    print("Python is " + x)
+
+myfunc()
+
+
+# تفاوت متغیر سراسری و محلی
+x = "awesome"
+
+def myfunc():
+    x = "fantastic"
+    print("Python is " + x)
+
+myfunc()
+print("Python is " + x)
+
+
+# تغییر متغیر سراسری با کلمه کلیدی global
+x = "awesome"
+
+def myfunc():
+    global x
+    x = "fantastic"
+
+myfunc()
+print("Python is " + x)
+
+
+print(x)
+
+
+# مقادیر بولین
+print(10 > 9)
+print(10 == 9)
+print(10 < 9)
+
+a = 200
+b = 33
+if b > a:
+    print("b is greater than a")
+else:
+    print("b is not greater than a")
+
+# تابع isinstance برای بررسی نوع داده
+x = 200
+print(isinstance(x, int))
+
+
+# عملگرهای حسابی
+x = 5
+y = 3
+print(x + y)   # جمع
+print(x - y)   # تفریق
+print(x * y)   # ضرب
+print(x / y)   # تقسیم
+print(x % y)   # باقیمانده
+print(x ** y)  # توان
+print(x // y)  # تقسیم صحیح
+
+
+
+# عملگرهای انتساب
+x = 5
+print(x)
+
+x = 5
+x += 3
+print(x)
+
+# سایر عملگرهای انتساب
+x = 5
+x -= 3  # x = x - 3
+print(x)
+
+x = 5
+x *= 3  # x = x * 3
+print(x)
+
+x = 5
+x /= 3  # x = x / 3
+print(x)
+
+
+# عملگرهای مقایسه‌ای
+x = 5
+y = 3
+print(x == y)  # برابر
+print(x != y)  # نامساوی
+print(x > y)   # بزرگتر
+print(x < y)   # کوچکتر
+print(x >= y)  # بزرگتر یا مساوی
+print(x <= y)  # کوچکتر یا مساوی
+
+
+# عملگرهای منطقی
+x = 5
+print(x > 3 and x < 10)   # AND
+print(x > 3 or x < 4)     # OR
+print(not(x > 3 and x < 10))  # NOT
+
+
+# عملگرهای هویت
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+
+print(x is z)      # True - چون z به همان شیء x اشاره می‌کند
+print(x is y)      # False - چون اشیاء متفاوت هستند
+print(x == y)      # True - چون محتوا یکسان است
+
+print(x is not z)  # False
+print(x is not y)  # True
+print(x != y)      # False
+
+
+# عملگرهای عضویت
+x = ["apple", "banana"]
+print("banana" in x)      # True
+print("pineapple" not in x)  # True
+
+
+# عملگرهای بیتی
+print(6 & 3)   # AND بیتی
+print(6 | 3)   # OR بیتی
+print(6 ^ 3)   # XOR بیتی
+print(~3)      # NOT بیتی
+print(3 << 2)  # شیفت به چپ
+print(8 >> 2)  # شیفت به راست
+
+
+# اولویت عملگرها
+print((6 + 3) - (6 + 3))  # اولویت با پرانتز است
