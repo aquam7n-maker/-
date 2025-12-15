@@ -1,0 +1,93 @@
+def stop(self):
+            self.status = "Off"
+            print("Engine stopped")
+
+    def drive(self):
+        if self.engine.status == "Running":
+            print(f"Driving the {self.brand} {self.model}")
+        else:
+            print("Start the engine first!")
+
+car = Car("Toyota", "Corolla")
+car.drive()
+car.engine.start()
+car.drive()
+
+# چند کلاس داخلی
+class Computer:
+    def init(self):
+        self.cpu = self.CPU()
+        self.ram = self.RAM()
+
+    class CPU:
+        def process(self):
+            print("Processing data ...")
+
+    class RAM:
+        def store(self):
+            print("Storing data ...")
+
+computer = Computer()
+computer.cpu.process()
+computer.ram.store()
+
+# چندریختی - متد move در کلاس‌های مختلف
+class Car:
+    def init(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def move(self):
+        print("Drive!")
+
+class Boat:
+    def init(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def move(self):
+        print("Sail!")
+
+class Plane:
+    def init(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def move(self):
+        print("Fly!")
+
+car1 = Car("Ford", "Mustang")
+boat1 = Boat("Ibiza", "Touring 20")
+plane1 = Plane("Boeing", "747")
+
+for x in (car1, boat1, plane1):
+    x.move()
+
+# چندریختی با وراثت
+class Vehicle:
+    def init(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def move(self):
+        print("Move!")
+
+class Car(Vehicle):
+    pass
+
+class Boat(Vehicle):
+    def move(self):
+        print("Sail!")
+
+class Plane(Vehicle):
+    def move(self):
+        print("Fly!")
+
+car1 = Car("Ford", "Mustang")
+boat1 = Boat("Ibiza", "Touring 20")
+plane1 = Plane("Boeing", "747")
+
+for x in (car1, boat1, plane1):
+    print(x.brand)
+    print(x.model)
+    x.move()
