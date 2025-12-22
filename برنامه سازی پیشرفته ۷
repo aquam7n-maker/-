@@ -1,0 +1,112 @@
+# تعریف متغیرهای جداگانه برای ماشین‌ها (روش ناکارآمد)
+car1 = "Ford"
+car2 = "Volvo"
+car3 = "BMW"
+
+# استفاده از لیست برای ذخیره چند مقدار
+cars = ["Ford", "Volvo", "BMW"]
+x = cars[0]  # دسترسی به اولین عنصر
+print(x)  # خروجی: Ford
+
+# استفاده از ماژول array برای آرایه عددی
+import array
+
+# ایجاد آرایه از نوع عدد صحیح
+arr = array.array('i', [1, 2, 3, 4])
+arr.append(5)     # افزودن عنصر
+arr[1] = 10       # تغییر مقدار عنصر دوم
+print(arr)        # خروجی: array('i', [1, 10, 3, 4, 5])
+
+# مقایسه لیست و آرایه
+lst = [1, 2, 3]
+lst.append(4)
+print("LIST =", lst)  # خروجی: [1, 2, 3, 4]
+
+arr = array.array('i', [1, 2, 3])
+arr.append(4)
+print(arr)  # خروجی: array('i', [1, 2, 3, 4])
+
+# دریافت ورودی از کاربر
+print("Enter your name:")
+name = input()
+print(f"Hello {name}")
+
+# دریافت چند ورودی از کاربر
+name = input("Enter your name: ")
+print(f"Hello {name}")
+fav1 = input("What is your favorite animal: ")
+fav2 = input("What is your favorite color: ")
+fav3 = input("What is your favorite number: ")
+print(f"Do you want a {fav2} {fav1} with {fav3} legs?")
+
+# تبدیل ورودی به عدد و محاسبه جذر
+import math
+
+x = input("Enter a number: ")
+y = math.sqrt(float(x))
+print(f"The square root of {x} is {y}")
+
+# اعتبارسنجی ورودی با try/except
+y = True
+while y:
+    x = input("Enter a number: ")
+    try:
+        x = float(x)
+        y = False
+    except:
+        print("Wrong input, please try again.")
+
+print("Thank you!")
+
+# استفاده از try/except ساده
+try:
+    print(x)
+except:
+    print("An exception occurred")
+
+# استفاده از except خاص و عمومی
+try:
+    print(x)
+except NameError:
+    print("Variable x is not defined")
+except:
+    print("Something else went wrong")
+
+# استفاده از else در try/except
+try:
+    print("Hello")
+except:
+    print("Something went wrong")
+else:
+    print("Nothing went wrong")
+
+# استفاده از finally
+try:
+    print(x)
+except:
+    print("Something went wrong")
+finally:
+    print("The 'try except' is finished")
+
+# توابع ریاضی داخلی
+x = min(5, 10, 25)
+y = max(5, 10, 25)
+print(x)  # خروجی: 5
+print(y)  # خروجی: 25
+
+x = abs(-7.25)
+print(x)  # خروجی: 7.25
+
+x = pow(4, 3)
+print(x)  # خروجی: 64
+
+# استفاده از ماژول math
+import math
+
+x = math.sqrt(64)
+print(x)  # خروجی: 8.0
+
+x = math.ceil(1.4)
+y = math.floor(1.4)
+print(x)  # خروجی: 2
+print(y)  # خروجی: 1
